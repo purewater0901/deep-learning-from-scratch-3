@@ -4,7 +4,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # update packages and install commands
 RUN apt update && DEBIAN_FRONTEND=noninteractive \
     apt install -y --no-install-recommends \
-    wget sudo vim git curl python3 python3-pip python3-tk ansible gnupg lsb-release build-essential libssl-dev libffi-dev python3-dev
+    wget sudo vim git curl python3 python3-pip python3-tk ansible gnupg lsb-release build-essential libssl-dev libffi-dev python3-dev graphviz
 RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 RUN apt update && apt install -y --no-install-recommends nodejs
 RUN apt upgrade -y
